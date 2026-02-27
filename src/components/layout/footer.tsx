@@ -1,4 +1,3 @@
-import { Facebook, Twitter, Instagram, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const footerLinks = [
