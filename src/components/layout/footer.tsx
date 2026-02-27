@@ -22,12 +22,6 @@ const Footer = () => {
           <p className="text-sm text-gray-400">
             Smart real estate solutions powered by AI. Buy, rent, or build with confidence.
           </p>
-          <div className="flex gap-4 mt-4">
-            <Facebook className="w-5 h-5 hover:text-white cursor-pointer" />
-            <Twitter className="w-5 h-5 hover:text-white cursor-pointer" />
-            <Instagram className="w-5 h-5 hover:text-white cursor-pointer" />
-            <Mail className="w-5 h-5 hover:text-white cursor-pointer" />
-          </div>
         </div>
 
         {/* Footer Links */}
