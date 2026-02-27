@@ -3,26 +3,9 @@ import { Link } from "react-router-dom";
 
 const footerLinks = [
   {
-    title: "Company",
-    links: [
-      { label: "About Us", href: "/about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      { label: "Help Center", href: "/help" },
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Terms of Service", href: "/terms" },
-    ],
-  },
-  {
     title: "Explore",
     links: [
       { label: "Properties", href: "/properties" },
-      { label: "Calculator", href: "/calculator" },
       { label: "Chat Assistant", href: "/chat" },
     ],
   },
@@ -30,38 +13,34 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <footer className="bg-gray-900 text-gray-300 py-10 px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
         {/* Logo and Description */}
         <div>
-          <h2 className="text-2xl font-bold mb-2">RentIQ</h2>
-          <p className="text-sm text-primary-foreground/60">
+          <h2 className="text-white text-2xl font-bold mb-2">RentIQ</h2>
+          <p className="text-sm text-gray-400">
             Smart real estate solutions powered by AI. Buy, rent, or build with confidence.
           </p>
-          <div className="flex gap-3 mt-4">
-            <a href="mailto:sdevelopedbyasif@gmail.com" aria-label="Email">
-              <Mail className="w-5 h-5 hover:text-teal-500" />
-            </a>
-            <a href="#" aria-label="Twitter">
-              <Twitter className="w-5 h-5 hover:text-teal-500" />
-            </a>
-            <a href="#" aria-label="Facebook">
-              <Facebook className="w-5 h-5 hover:text-teal-500" />
-            </a>
-            <a href="#" aria-label="Instagram">
-              <Instagram className="w-5 h-5 hover:text-teal-500" />
-            </a>
+          <div className="flex gap-4 mt-4">
+            <Facebook className="w-5 h-5 hover:text-white cursor-pointer" />
+            <Twitter className="w-5 h-5 hover:text-white cursor-pointer" />
+            <Instagram className="w-5 h-5 hover:text-white cursor-pointer" />
+            <Mail className="w-5 h-5 hover:text-white cursor-pointer" />
           </div>
         </div>
 
         {/* Footer Links */}
         {footerLinks.map((section, idx) => (
           <div key={idx}>
-            <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h3 className="text-white font-semibold mb-3">{section.title}</h3>
+            <ul className="space-y-2">
               {section.links.map((link, i) => (
                 <li key={i}>
-                  <Link to={link.href} className="hover:text-teal-500 transition">
+                  <Link
+                    to={link.href}
+                    className="text-sm hover:text-white transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -72,7 +51,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom copyright */}
-      <div className="mt-12 text-center text-sm text-gray-400">
+      <div className="text-center text-sm text-gray-500 mt-10 border-t border-gray-700 pt-4">
         © {new Date().getFullYear()} RentIQ. All rights reserved.
       </div>
     </footer>
